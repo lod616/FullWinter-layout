@@ -94,7 +94,9 @@
 	margin-left: auto;
 }
 
-
+.header-card__basket{
+	cursor: pointer;
+}
 
 
 
@@ -176,6 +178,7 @@
 		}
 		&-basket{
 			color: $orangeColor;
+			cursor: pointer;
 		}
 	}
 	.swiper-container,
