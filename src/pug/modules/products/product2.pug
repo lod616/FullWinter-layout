@@ -1,0 +1,43 @@
+.new-arrivals__item
+	.new-arrivals__item-visible
+		.item-visible__img
+			img(src="img/general/new-arrivals/img-2.png")
+		span.new-arrivals__item-name.products-item__title Reebok Track Jacket
+		.item-visible__price
+			span.item-visible__price-number 100$
+	.new-arrivals__item-hover
+		.products-slider__wrapper
+			.new-arrivals-js__slider.swiper-container
+				ul.products-item__slider-list.swiper-wrapper
+					li.products-list__item.swiper-slide
+						img(src="img/general/new-arrivals/img-1.png").products-slider__item
+					li.products-list__item.swiper-slide
+						img(src="img/general/new-arrivals/img-1.png").products-slider__item
+					li.products-list__item.swiper-slide
+						img(src="img/general/new-arrivals/img-1.png").products-slider__item
+					li.products-list__item.swiper-slide
+						img(src="img/general/new-arrivals/img-1.png").products-slider__item
+		span.products-item__title.products-item__title--orange Reebok Track Jacket
+		.item-hover__size
+			span sizes :
+			ul.item-hover__size-list.size-list
+				li.size-list__item
+					span s
+				li.size-list__item
+					span m
+				li.size-list__item
+					span x
+				li.size-list__item
+					span xl
+		.products-dots
+				span.products-dots__item.products-dots__item--red
+				span.products-dots__item.products-dots__item--purple
+				span.products-dots__item.products-dots__item--blue
+				span.products-dots__item.products-dots__item--green
+		.products-item__footer
+			span.products-item__footer-icon
+				+icon('earth', 'products-item__icon')
+			span.products-item__footer-icon
+				+icon('shopping-new__cart', 'products-item__icon')
+			span.products-item__footer-icon
+				+icon('heart', 'products-item__icon')

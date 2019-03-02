@@ -1,0 +1,175 @@
+
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+		font-family: $main-font;
+		font-size: 12px;
+		background-color: $backgroundGrayColor;
+		color: $main-color;
+}
+
+nav,ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a{text-decoration: none;}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+section{
+	padding: 100px 0;
+}
+
+.container{
+    max-width: 1180px;
+    width: 97%;
+		margin: 0 auto;
+}
+
+.shopping-cart__basket{
+	width: 24px;
+	height: 17px;
+	fill: $orangeColor;
+}
+
+.title-section{
+	font-size: 36px;
+	font-family: $boldFont;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	&--orange{
+		color: $orangeColor;
+	}
+}
+
+.text-section{
+	font-size: 16px;
+	margin-bottom: 60px;
+}
+
+.product-title-g{
+	display: block;
+	font-size: 52px;
+	font-family: $boldFont;
+	color: $orangeColor;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+// header burger
+.header-burger{
+	
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&__line{
+		display: block;
+		width: 15px;
+		height: 3px;
+		background-color: #000;
+		margin-bottom: 4px;
+		&:last-child {margin-bottom: 0;}
+		transition: all .3s ease-in-out;
+	}
+	&.header-burger--active{
+		.header-burger__line{
+			&:nth-child(1){
+				transform: translateY(9px) rotate(45deg);
+			}
+			&:nth-child(2){
+				opacity: 0;
+			}
+			&:nth-child(3){
+				transform: translateY(-5px) rotate(-45deg);
+			}
+		}
+	}
+}
+
+.products-text{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.products-item__footer{
+	.products-item__icon{
+		width: 21px;
+		height: 21px;
+	}
+}
+
+.shopping-cart__icon{
+	width: 21px;
+	height: 21px;
+	fill: $orangeColor;
+}
+
+.products-item__icon{
+	&:hover{
+		fill: $orangeColor;
+	}
+}
+
+.products-item__title{
+	font-size: 18px;
+	font-family: $boldFont;
+	display: block;
+	margin-bottom: 20px;
+	&--orange{
+		color: $orangeColor;
+	}
+}
+
+
+.news-letter__right-link{
+	height: 50px;
+	line-height: 50px;
+	background-color: $orangeColor;
+	padding: 0 25px;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 150px;
+}
+
+.g-btn{
+	height: 50px;
+	line-height: 50px;
+	padding: 0 25px;
+	border: none;
+	font-size: 14px;
+	color: white;
+	background-color: $orangeColor;
+	cursor: pointer;
+}
+
+.g-btn-product{
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 30px;
+	padding: 0 22px;
+	background-color: $orangeColor;
+	font-size: 18px;
+	color: #fff;
+}

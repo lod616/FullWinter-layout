@@ -1,0 +1,21 @@
+.best-sales__item
+	.best-sales__img
+		img(src="img/general/best-sales/best-sales-1.png")
+	.best-sales__descr
+		span.products-item__title Reebok Track Jacket
+		.best-sales__buy
+			.best-sales__buy-visible
+				.best-sales__buy-wrapper
+					ul.stars-list
+						li.stars-list__item
+							+icon('star', 'best-sales__icon')
+						li.stars-list__item
+							+icon('star', 'best-sales__icon')
+						li.stars-list__item
+							+icon('star', 'best-sales__icon')
+						li.stars-list__item
+							+icon('star', 'best-sales__icon best-sales__icon--gray')
+					span.best-sales__price 100$
+			.best-sales__buy-hover
+				+icon('shopping-new__cart','shopping-cart__icon')
+				a(href='#').best-sales__buy-link add to cart

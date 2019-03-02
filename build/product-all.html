@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <title>Страница продукта</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="header-top__contacts">
+            <div class="header-top__mail">
+              <svg class="icon icon-mail header-top__mail-icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#mail"></use>
+              </svg><span class="header-top__mail-text">info@shopy.com</span>
+            </div>
+            <div class="header-top__phone">
+              <svg class="icon icon-home-phone header-top__phone-icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#home-phone"></use>
+              </svg><span class="header-top__phone-text">996 - 5553 - 453</span>
+            </div>
+          </div>
+          <nav class="header-top__socials">
+            <ul class="header-top__list">
+              <li class="header-top__item"><a class="header-top__link" href="#">
+                  <svg class="icon icon-facebook header-top__list-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="header-top__item"><a class="header-top__link" href="#">
+                  <svg class="icon icon-twitter header-top__list-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#twitter"></use>
+                  </svg></a></li>
+              <li class="header-top__item"><a class="header-top__link" href="#">
+                  <svg class="icon icon-google-plus header-top__list-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#google-plus"></use>
+                  </svg></a></li>
+              <li class="header-top__item"><a class="header-top__link" href="#">
+                  <svg class="icon icon-instagram header-top__list-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#instagram"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-main">
+          <div class="header-main__logo"><a class="header-logo__link" href="#"><img src="img/general/main-logo.png"></a></div>
+          <div class="header-main__menu">
+            <div class="header-burger"><span class="header-burger__line"></span><span class="header-burger__line"></span><span class="header-burger__line"></span></div>
+            <ul class="header-main__list">
+              <li class="header-main__item"><a class="header-main__link" href="#">Home</a></li>
+              <li class="header-main__item"><a class="header-main__link" href="#">Products</a></li>
+              <li class="header-main__item"><a class="header-main__link" href="#">Hot Deals</a></li>
+              <li class="header-main__item"><a class="header-main__link" href="#">About</a></li>
+              <li class="header-main__item"><a class="header-main__link" href="#">Contact			</a></li>
+            </ul>
+          </div>
+          <div class="header-main__card">
+            <div class="header-search">
+              <form class="search-form" action="">
+                <div class="search-input__wrapper">
+                  <input class="search-form__txt" type="text" placeholder="What are you looking for?">
+                  <svg class="icon icon-close-search close-search-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#close-search"></use>
+                  </svg>
+                </div>
+                <div class="search-icon__wrapper">
+                  <svg class="icon icon-header-search header-search-icon">
+                    <use xlink:href="img/svg/symbol/sprite.svg#header-search"></use>
+                  </svg>
+                </div>
+              </form>
+            </div>
+            <div class="header-card__basket">
+              <svg class="icon icon-shopping-cart shopping-cart__basket">
+                <use xlink:href="img/svg/symbol/sprite.svg#shopping-cart"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="all-products">
+      <div class="container">
+        <div class="all-products__wrapper">
+          <aside class="all-products__filter">
+            <div class="filter-item"><span class="filter-item__title">Categories</span>
+              <ul class="filter-item__list filter-list">
+                <li class="filter-list__item"><a class="filter-list__link" href="javascript:void(0);">Man</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="javascript:void(0);">Women</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="javascript:void(0);">Childrens</a></li>
+                <li class="filter-list__item"><a class="filter-list__link" href="javascript:void(0);">Hot Deals</a></li>
+              </ul>
+            </div>
+            <div class="filter-item"><span class="filter-item__title">Price Filtter</span>
+              <div class="filter-item__line">
+                <input class="filter-item__line-range" type="range">
+              </div>
+              <div class="filter-item__price">
+                <div class="filter-item__price-from">
+                  <label for="price-input__from">From</label>
+                  <input type="text" id="price-input__from">
+                </div>
+                <div class="filter-item__price-to">
+                  <label for="price-input__to">To</label>
+                  <input type="text" id="price-input__to">
+                </div>
+              </div>
+            </div>
+            <div class="filter-item filter-item--sizes"><span class="filter-item__title">Sizes</span>
+              <div class="filter-item__line">
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="sm">Small
+                    <input class="filter-line__checkbox" type="checkbox" id="sm"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="md">Medium
+                    <input class="filter-line__checkbox" type="checkbox" id="md"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="lg">Larg
+                    <input class="filter-line__checkbox" type="checkbox" id="lg"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="xl">X Larg
+                    <input class="filter-line__checkbox" type="checkbox" id="xl"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-item filter-item--brands"><span class="filter-item__title">Brands</span>
+              <div class="filter-item__line">
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="rb">Reebok
+                    <input class="filter-line__checkbox" type="checkbox" id="rb"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="as">Adiddas
+                    <input class="filter-line__checkbox" type="checkbox" id="as"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="nk">Nike
+                    <input class="filter-line__checkbox" type="checkbox" id="nk"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+                <div class="filter-line">
+                  <label class="filter-checkbox" for="act">Active
+                    <input class="filter-line__checkbox" type="checkbox" id="act"><span class="custom-checkbox"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <main class="all-products__show">
+            <div class="all-products__show-wrapper">
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-1.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-2.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-3.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-1.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-1.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-2.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-3.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-1.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+              <div class="new-arrivals__item">
+                <div class="new-arrivals__item-visible">
+                  <div class="item-visible__img"><img src="img/general/new-arrivals/img-2.png"></div><span class="new-arrivals__item-name products-item__title">Reebok Track Jacket</span>
+                  <div class="item-visible__price"><span class="item-visible__price-number">100$</span></div>
+                </div>
+                <div class="new-arrivals__item-hover">
+                  <div class="products-slider__wrapper">
+                    <div class="new-arrivals-js__slider swiper-container">
+                      <ul class="products-item__slider-list swiper-wrapper">
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                        <li class="products-list__item swiper-slide"><img class="products-slider__item" src="img/general/new-arrivals/img-1.png"></li>
+                      </ul>
+                    </div>
+                  </div><span class="products-item__title products-item__title--orange">Reebok Track Jacket</span>
+                  <div class="item-hover__size"><span>sizes :</span>
+                    <ul class="item-hover__size-list size-list">
+                      <li class="size-list__item"><span>s</span></li>
+                      <li class="size-list__item"><span>m</span></li>
+                      <li class="size-list__item"><span>x</span></li>
+                      <li class="size-list__item"><span>xl</span></li>
+                    </ul>
+                  </div>
+                  <div class="products-dots"><span class="products-dots__item products-dots__item--red"></span><span class="products-dots__item products-dots__item--purple"></span><span class="products-dots__item products-dots__item--blue"></span><span class="products-dots__item products-dots__item--green"></span></div>
+                  <div class="products-item__footer"><span class="products-item__footer-icon">
+                      <svg class="icon icon-earth products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#earth"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-shopping-new__cart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#shopping-new__cart"></use>
+                      </svg></span><span class="products-item__footer-icon">
+                      <svg class="icon icon-heart products-item__icon">
+                        <use xlink:href="img/svg/symbol/sprite.svg#heart"></use>
+                      </svg></span></div>
+                </div>
+              </div>
+            </div><a class="products-more-load" href="#"><span class="products-more-load-circle"></span><span class="products-more-load-circle"></span><span class="products-more-load-circle"></span></a>
+          </main>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe">
+      <div class="container">
+        <div class="subscribe-body">
+          <div class="subscribe-body__info"><span class="subscribe-body__title">News Letter</span>
+            <p class="subscribe-body__text">join us now to get all news and special offers</p>
+          </div>
+          <form class="subscribe-form">
+            <div class="subscribe-form__email">
+              <svg class="icon icon-letter subscribe-form__email-icon">
+                <use xlink:href="img/svg/symbol/sprite.svg#letter"></use>
+              </svg>
+              <input class="subscribe-form__email-input" placeholder="type your email here">
+            </div>
+            <input class="subscribe-form__submit g-btn" type="submit" value="Join Us">
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-body">
+          <div class="footer-logo"><a class="footer-logo__link" href="javascript:void(0;)"><img src="img/general/main-logo.png"></a></div>
+          <div class="footer-links">
+            <ul class="footer-links__list">
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">about us</a></li>
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">contact us</a></li>
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">support</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <ul class="footer-links__list">
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">our feed</a></li>
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">terms and conditions</a></li>
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">our privacy</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <ul class="footer-links__list">
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">join us</a></li>
+              <li class="footer-links__item"> <a class="footer-links__link" href="#">live support</a></li>
+            </ul>
+          </div>
+          <div class="footer-payment"><span class="footer-payment__title">Payment Methods</span>
+            <ul class="footer-payment__list">
+              <li class="footer-payment__item">
+                <svg class="icon icon-payment-visa payment-icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#payment-visa"></use>
+                </svg>
+              </li>
+              <li class="footer-payment__item">
+                <svg class="icon icon-payment-amex payment-icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#payment-amex"></use>
+                </svg>
+              </li>
+              <li class="footer-payment__item">
+                <svg class="icon icon-payment-visa payment-icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#payment-visa"></use>
+                </svg>
+              </li>
+              <li class="footer-payment__item">
+                <svg class="icon icon-payment-visa payment-icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#payment-visa"></use>
+                </svg>
+              </li>
+              <li class="footer-payment__item">
+                <svg class="icon icon-payment-amex payment-icon">
+                  <use xlink:href="img/svg/symbol/sprite.svg#payment-amex"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

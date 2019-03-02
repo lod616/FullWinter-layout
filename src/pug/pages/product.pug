@@ -1,0 +1,78 @@
+include ../mixins
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="UTF-8")
+		title Страница продукта
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+	body
+		include ../layout/header
+
+		section.product-view
+			.container
+				.product-view__body
+					.product-gallery
+						.product-js__slider.swiper-container
+							ul.product-slider__list.swiper-wrapper
+								li.product-list__item.swiper-slide
+									img(src="img/general/product-view.png")
+								li.product-list__item.swiper-slide
+									img(src="img/general/product-view.png")
+								li.product-list__item.swiper-slide
+									img(src="img/general/product-view.png")
+							.js-product-view__pager
+								span.product-pager__item
+								span.product-pager__item
+								span.product-pager__item 
+					.product-info
+						.product-info__text
+							span.product-info__title.product-title-g Full Winter Kit
+							span.product-info__subtitle Half Jacket + Skiny Trousers + Boot leather
+							p.product-info__descr 
+								| Lorem Ipsum is simply dummy text of the printing and typesetting industry
+								| Lorem Ipsum is simply dummy text of the printing <br>
+								| and typesetting industry
+						.product-info__setting
+							.product-setting__choos-size
+								span.product-info__setting-text Choos Size
+								ul.setting-size__list
+									li.setting-size__list__item s
+									li.setting-size__list__item m
+									li.setting-size__list__item l
+									li.setting-size__list__item xl
+							.product-setting__choos-quantity
+								span.product-info__setting-text Choos Quantity
+								.choos-quantity__switch
+									span.choos-quantity__switch-plus +
+									span.choos-quantity__switch-number 0
+									span.choos-quantity__switch-min -
+						.product-info__action
+							span.product-action__price  Price : $120 
+							.products-item__footer.product-view__action
+								span.products-item__footer-icon
+									+icon('earth', 'products-item__icon')
+								span.products-item__footer-icon
+									+icon('shopping-new__cart', 'products-item__icon')
+								span.products-item__footer-icon
+									+icon('heart', 'products-item__icon')
+								a(href="javascript:void(0);").g-btn-product Order Now
+
+
+		section.new-arrivals
+			.container
+				.new-arrivals__text.products-text
+					h1.new-arrivals__title.title-section <span class="title-section--orange">Related</span> Products
+					p.new-arrivals__info Lorem Ipsum is simply dummy text of the printing and typesetting industry
+				.new-arrivals__catalog
+					include ../modules/products/product1
+					include ../modules/products/product2
+					include ../modules/products/product3
+					include ../modules/products/product4
+
+		include ../modules/subscribe
+		
+		include ../layout/footer
+
+		script(type="text/javascript" src="js/main.js")

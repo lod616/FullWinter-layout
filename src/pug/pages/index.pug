@@ -1,0 +1,96 @@
+include ../mixins
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="UTF-8")
+		html(lang="ru")
+		title Главная страница
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+	body
+		include ../layout/header
+
+		section.top-banner
+			.container
+				.top-banner-js__slider.swiper-container
+					.top-banner__slider-pagination
+						span.top-banner__pagination-item
+						span.top-banner__pagination-item
+						span.top-banner__pagination-item
+					.top-banner-slider__wrapper.swiper-wrapper
+						.top-banner__item.swiper-slide
+							h1.top-banner__title.product-title-g Full Winter Kit
+							.top-banner__info
+								span.top-banner__info-text Half Jacket + Skiny Trousers + Boot leather
+								span.top-banner__info-descr Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							.top-banner__price
+								span.top-banner__price-number Price: 120$
+								.top-banner__price-basket
+									+icon('shopping-cart', 'shopping-cart__basket')
+									span.top-banner__price-text Order Now
+						.top-banner__item.swiper-slide
+							h1.top-banner__title Full Winter Kit
+							.top-banner__info
+								span.top-banner__info-text Half Jacket + Skiny Trousers + Boot leather
+								span.top-banner__info-descr Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							.top-banner__price
+								span.top-banner__price-number Price: 120$
+								.top-banner__price-basket
+									+icon('shopping-cart', 'shopping-cart__basket')
+									span.top-banner__price-text Order Now
+						.top-banner__item.swiper-slide
+							h1.top-banner__title Full Winter Kit
+							.top-banner__info
+								span.top-banner__info-text Half Jacket + Skiny Trousers + Boot leather
+								span.top-banner__info-descr Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							.top-banner__price
+								span.top-banner__price-number Price: 120$
+								.top-banner__price-basket
+									+icon('shopping-cart', 'shopping-cart__basket')
+									span.top-banner__price-text Order Now
+
+		section.new-arrivals
+			.container
+				.new-arrivals__text.products-text
+					h1.new-arrivals__title.title-section <span class="title-section--orange">New</span> Arrivals
+					p.new-arrivals__info Lorem Ipsum is simply dummy text of the printing and typesetting industry
+				.new-arrivals__catalog
+					include ../modules/products/product1
+					include ../modules/products/product2
+					include ../modules/products/product3
+					include ../modules/products/product4
+				a(href="#").products-more-load
+					span.products-more-load-circle
+					span.products-more-load-circle
+					span.products-more-load-circle
+		section.banners
+			.container
+				.banners-wrapper
+					.banners-left
+						.banners-left__sale
+							img(src="img/general/banners-sale.png").banners-left__sale-img
+						.banners-left__text
+							span.banners-left__text-title Full Winter Kit
+							span.banners-left__text-descr Half Jacket + Skiny Trousers + Boot leather
+						.banners-left__buy
+							+icon('shopping-new__cart', 'banners-icon shopping-cart__icon')
+							span.banners-left__buy-price 120$
+					.banners-right
+						span.banners-right__title adv area
+						span.banners-right__size 4 7 0  x  1 0 0
+		section.best-sales
+			.container
+				.best-sales__info.products-text
+					h1.title-section <span class="title-section--orange">Best</span> Sales
+					p.best-sales__info-text Lorem Ipsum is simply dummy text of the printing and typesetting industry
+				.best-sales__catalog
+					include ../modules/bestSales/item-1
+					include ../modules/bestSales/item-2
+					include ../modules/bestSales/item-3
+		include ../modules/subscribe
+
+		
+		include ../layout/footer
+
+		script(type="text/javascript" src="js/main.js")

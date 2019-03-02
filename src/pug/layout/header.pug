@@ -1,0 +1,54 @@
+header.header
+	.container
+		.header-top
+			.header-top__contacts
+				.header-top__mail
+					+icon('mail', 'header-top__mail-icon')
+					span.header-top__mail-text info@shopy.com
+				.header-top__phone
+					+icon('home-phone', 'header-top__phone-icon')
+					span.header-top__phone-text 996 - 5553 - 453
+			nav.header-top__socials
+				ul.header-top__list
+					li.header-top__item
+						a(href="#").header-top__link
+							+icon('facebook', 'header-top__list-icon')
+					li.header-top__item
+						a(href="#").header-top__link
+							+icon('twitter', 'header-top__list-icon')
+					li.header-top__item
+						a(href="#").header-top__link
+							+icon('google-plus', 'header-top__list-icon')
+					li.header-top__item
+						a(href="#").header-top__link
+							+icon('instagram', 'header-top__list-icon')
+		.header-main
+			.header-main__logo
+				a(href="#").header-logo__link
+					img(src="img/general/main-logo.png")
+			.header-main__menu
+				.header-burger
+					span.header-burger__line
+					span.header-burger__line
+					span.header-burger__line
+				ul.header-main__list
+					li.header-main__item
+						a(href='#').header-main__link Home
+					li.header-main__item
+						a(href='#').header-main__link Products
+					li.header-main__item
+						a(href='#').header-main__link Hot Deals
+					li.header-main__item
+						a(href='#').header-main__link About
+					li.header-main__item
+						a(href='#').header-main__link Contact			
+			.header-main__card
+				.header-search
+					form(action="").search-form
+						.search-input__wrapper
+							input(type="text" placeholder="What are you looking for?").search-form__txt
+							+icon('close-search', 'close-search-icon')
+						.search-icon__wrapper
+							+icon('header-search', 'header-search-icon')
+				.header-card__basket
+					+icon('shopping-cart', 'shopping-cart__basket' )

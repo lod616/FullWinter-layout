@@ -1,0 +1,105 @@
+include ../mixins
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="UTF-8")
+		title Страница продукта
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+	body
+		include ../layout/header
+
+	
+		section.all-products
+			.container
+				.all-products__wrapper
+					aside.all-products__filter
+						.filter-item
+							span.filter-item__title Categories
+							ul.filter-item__list.filter-list
+								li.filter-list__item
+									a(href="javascript:void(0);").filter-list__link Man
+								li.filter-list__item
+									a(href="javascript:void(0);").filter-list__link Women
+								li.filter-list__item
+									a(href="javascript:void(0);").filter-list__link Childrens
+								li.filter-list__item
+									a(href="javascript:void(0);").filter-list__link Hot Deals
+						
+						.filter-item
+							span.filter-item__title Price Filtter
+							.filter-item__line
+								input(type="range").filter-item__line-range
+							.filter-item__price
+								.filter-item__price-from
+									label(for="price-input__from") From
+									input(type="text" id="price-input__from")
+								.filter-item__price-to
+									label(for="price-input__to") To
+									input(type="text" id="price-input__to")
+						.filter-item.filter-item--sizes
+							span.filter-item__title Sizes
+							.filter-item__line
+								.filter-line
+									label(for="sm").filter-checkbox Small
+										input(type="checkbox" id="sm").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="md").filter-checkbox Medium
+										input(type="checkbox" id="md").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="lg").filter-checkbox Larg
+										input(type="checkbox" id="lg").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="xl").filter-checkbox X Larg
+										input(type="checkbox" id="xl").filter-line__checkbox
+										span.custom-checkbox
+
+						.filter-item.filter-item--brands
+							span.filter-item__title Brands
+							.filter-item__line
+								.filter-line
+									label(for="rb").filter-checkbox Reebok
+										input(type="checkbox" id="rb").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="as").filter-checkbox Adiddas
+										input(type="checkbox" id="as").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="nk").filter-checkbox Nike
+										input(type="checkbox" id="nk").filter-line__checkbox
+										span.custom-checkbox
+								.filter-line
+									label(for="act").filter-checkbox Active
+										input(type="checkbox" id="act").filter-line__checkbox
+										span.custom-checkbox
+								
+
+					main.all-products__show
+						.all-products__show-wrapper
+							include ../modules/products/product1
+							include ../modules/products/product2
+							include ../modules/products/product3
+							include ../modules/products/product4
+							include ../modules/products/product1
+							include ../modules/products/product2
+							include ../modules/products/product3
+							include ../modules/products/product4
+							include ../modules/products/product2
+						a(href="#").products-more-load
+							span.products-more-load-circle
+							span.products-more-load-circle
+							span.products-more-load-circle
+
+		include ../modules/subscribe
+		
+		include ../layout/footer
+
+		script(type="text/javascript" src="js/main.js")
+		
+		
+
