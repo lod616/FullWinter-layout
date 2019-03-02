@@ -55,7 +55,7 @@ gulp.task('style', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		//.pipe(csso())
+		.pipe(csso())
 		.pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./build/css'))
